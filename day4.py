@@ -34,6 +34,11 @@ print(company.lower())
 """
 
 # 8. Use capitalize(), title(), swapcase() methods to format the value of the string Coding For All.
+"""
 print(company.capitalize())
 print(company.title())
 print(company.swapcase())
+"""
+
+# 9. Cut(slice) out the first word of Coding For All string.
+print(company[7:])
