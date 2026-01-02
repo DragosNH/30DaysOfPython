@@ -44,6 +44,11 @@ print(company.swapcase())
 # print(company[7:])
 
 # 10. Check if Coding For All string contains a word Coding using the method index, find or other methods.
+"""
 sub_string = "Coding"
 print(company.index(sub_string))
 print(company.find("Coding"))
+"""
+
+# 11. Replace the word coding in the string 'Coding For All' to Python
+print(company.replace('Coding', 'Python'))
