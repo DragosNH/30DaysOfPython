@@ -17,13 +17,23 @@ print(result)
 company = "Coding For All"
 
 # 4. Print the variable company using print().
+"""
 print(company)
-
+"""
 # 5. Print the length of the company string using len() method and print().
+"""
 print(len(company))
-
+"""
 # 6. Change all the characters to uppercase letters using upper() method.
+"""
 print(company.upper())
-
+"""
 # 7. Change all the characters to lowercase letters using lower() method.
+"""
 print(company.lower())
+"""
+
+# 8. Use capitalize(), title(), swapcase() methods to format the value of the string Coding For All.
+print(company.capitalize())
+print(company.title())
+print(company.swapcase())
