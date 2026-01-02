@@ -41,4 +41,9 @@ print(company.swapcase())
 """
 
 # 9. Cut(slice) out the first word of Coding For All string.
-print(company[7:])
+# print(company[7:])
+
+# 10. Check if Coding For All string contains a word Coding using the method index, find or other methods.
+sub_string = "Coding"
+print(company.index(sub_string))
+print(company.find("Coding"))
