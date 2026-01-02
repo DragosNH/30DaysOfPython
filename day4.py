@@ -51,4 +51,13 @@ print(company.find("Coding"))
 """
 
 # 11. Replace the word coding in the string 'Coding For All' to Python
-print(company.replace('Coding', 'Python'))
+# print(company.replace('Coding', 'Python'))
+company = company.replace('Coding', 'Python')
+
+# 12.Change Python for Everyone to Python for All using the replace method or other methods.
+company = company.replace('All', 'Everyone') # There is an error in the exercice since the string never contained "Everyone" it was "All" from the begining.
+# print(company)
+
+# 13. Split the string 'Coding For All' using space as the separator (split()).
+company = company.split()
+print(company)
