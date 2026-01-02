@@ -110,5 +110,21 @@ long_sentence = 'You cannot end a sentence with because because because is a con
 # print(long_sentence.rindex("because")) # 47
 
 # 25. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+# print(long_sentence[31:55]) 
 
-print(long_sentence[31:55]) 
+# 26. Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+# print(company.find("because"))
+
+# 27. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+# print(long_sentence[31:55]) 
+
+# 28. Does ''Coding For All' start with a substring Coding?
+sub_string = "Coding"
+# print(company.index(sub_string)) # True
+
+# 29. Does 'Coding For All' end with a substring coding?
+# print(company.index(sub_string)) # False
+
+# 30. '   Coding For All      '  , remove the left and right trailing spaces in the given string.
+new_company = '   Coding For All      '
+print(new_company.strip())
