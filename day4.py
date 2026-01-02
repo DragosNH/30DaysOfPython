@@ -75,10 +75,40 @@ companies = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
 # 17. What character is at index 10 in "Coding For All" string.
 # print(company[10]) # Space
 
-# 18. Create an acronym or an abbreviation for the name 'Python For Everyone'.
-
+# 18. Create an acronym or an abbreviation for the name 'Python For Everyone'
+"""
+company = "Python For Everyone"
 a,b,c = company[0], company[7],company[11]
 print(a)
 print(b)
 print(c)
+"""
+# 19. Create an acronym or an abbreviation for the name 'Coding For All'.
+"""
+company = "Coding For All"
+a,b,c = company[0], company[7],company[11]
+print(a)
+print(b)
+print(c)
+"""
 
+# 20. Use index to determine the position of the first occurrence of C in Coding For All.
+# print(company.index("C"))
+
+# 21. Use index to determine the position of the first occurrence of F in Coding For All.
+# print(company.index("F"))
+
+# 22. Use rfind to determine the position of the last occurrence of l in Coding For All People.
+# print(company.rfind("l")) # 13
+
+# 23. Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+long_sentence = 'You cannot end a sentence with because because because is a conjunction'
+# print(long_sentence.index("because")) # 31
+
+# 24. Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+# print(long_sentence.rindex("because")) # 47
+
+# 25. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+
+print(long_sentence[31:55]) 
