@@ -127,4 +127,58 @@ sub_string = "Coding"
 
 # 30. '   Coding For All      '  , remove the left and right trailing spaces in the given string.
 new_company = '   Coding For All      '
-print(new_company.strip())
+# print(new_company.strip())
+
+# 31. Which one of the following variables return True when we use the method isidentifier(): 30DaysOfPython thirty_days_of_python
+# Not clear enough
+
+# 32. The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
+python_libraries = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+joined_pythin_libraries = ' '.join(python_libraries)
+
+# print(joined_pythin_libraries)
+
+# 33. Use the new line escape sequence to separate the following sentences
+# print("I am enjoying this challenge.\nI just wonder what is next.")
+
+# 34. Use a tab escape sequence to write the following lines 
+"""
+Name      Age     Country   City
+Asabeneh  250     Finland   Helsinki
+"""
+# print('Name\tAge\tCountry\tCity\nDragos\t250\tFrance\tParis')
+
+# 35. Use the string formatting method to display the following:
+"""
+radius = 10
+area = 3.14 * radius ** 2
+The area of a circle with radius 10 is 314 meters square.
+"""
+radius = 10
+area = 3.14 * radius ** 2
+print(f"""
+radius = {radius}\n
+area = 3.14 * radius ** 2\n
+The area of a circle with radius {radius} is {area} meters square.
+""")
+
+# 36. Make the following using string formatting methods:
+"""
+8 + 6 = 14
+8 - 6 = 2
+8 * 6 = 48
+8 / 6 = 1.33
+8 % 6 = 2
+8 // 6 = 1
+8 ** 6 = 262144
+"""
+
+print("""
+8 + 6 = 14\n
+8 - 6 = 2\n
+8 * 6 = 48\n
+8 / 6 = 1.33\n
+8 % 6 = 2\n
+8 // 6 = 1\n
+8 ** 6 = 262144
+""")
