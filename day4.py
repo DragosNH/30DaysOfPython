@@ -23,5 +23,7 @@ print(company)
 print(len(company))
 
 # 6. Change all the characters to uppercase letters using upper() method.
-
 print(company.upper())
+
+# 7. Change all the characters to lowercase letters using lower() method.
+print(company.lower())
