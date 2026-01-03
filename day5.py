@@ -49,7 +49,7 @@ it_companies.insert(4, "OpenAi")
 
 # 13. Change one of the it_companies names to uppercase (IBM excluded!)
 it_companies[1] = it_companies[1].upper()
-print(it_companies)
+# print(it_companies)
 
 #  14. Join the it_companies with a string '#;  '
 a_string = '#;  '
@@ -58,3 +58,20 @@ joined_items = str(it_companies) + a_string
 
 # 15. Check if a certain company exists in the it_companies list.
 # print("IBM" in it_companies)
+
+# 16. Sort the list using sort() method
+it_companies.sort()
+# print(it_companies)
+
+# 17. Reverse the list in descending order using reverse() method
+it_companies.reverse()
+# print(it_companies)
+
+# 18. Slice out the first 3 companies from the list
+# print(it_companies[3:])
+
+# 19. Slice out the last 3 companies from the list
+# print(it_companies[:-3])
+
+# 20. Slice out the middle IT company or companies from the list
+print(it_companies[:4] + it_companies[4 + 1:])
