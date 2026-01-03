@@ -37,4 +37,24 @@ print(it_companies[6])
 
 # 10. Print the list after modifying one of the companies
 it_companies[0] = "Meta"
+# print(it_companies)
+
+# 11. Add an IT company to it_companies
+it_companies.append("Nvidia")
+# print(it_companies)
+
+# 12. Insert an IT company in the middle of the companies list
+it_companies.insert(4, "OpenAi")
+# print(it_companies)
+
+# 13. Change one of the it_companies names to uppercase (IBM excluded!)
+it_companies[1] = it_companies[1].upper()
 print(it_companies)
+
+#  14. Join the it_companies with a string '#;  '
+a_string = '#;  '
+joined_items = str(it_companies) + a_string
+# print(joined_items)
+
+# 15. Check if a certain company exists in the it_companies list.
+# print("IBM" in it_companies)
