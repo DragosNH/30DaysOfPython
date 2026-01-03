@@ -74,4 +74,24 @@ it_companies.reverse()
 # print(it_companies[:-3])
 
 # 20. Slice out the middle IT company or companies from the list
-print(it_companies[:4] + it_companies[4 + 1:])
+# print(it_companies[:4] + it_companies[4 + 1:])
+
+# 21. Remove the first IT company from the list
+# it_companies.pop(0)
+# print(it_companies)
+
+# 22. Remove the middle IT company or companies from the list
+# print(len(it_companies)//2) #Middle index is 4
+# it_companies.pop(4)
+# print(it_companies)
+
+# 23. Remove the last IT company from the list
+# it_companies.pop()
+# print(it_companies)
+
+# 24. Remove all IT companies from the list
+# it_companies.clear()
+# print(it_companies)
+
+# 25. Destroy the IT companies list
+del it_companies
