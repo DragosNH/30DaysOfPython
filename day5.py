@@ -63,37 +63,37 @@ joined_items = str(it_companies) + a_string
 it_companies.sort()
 # print(it_companies)
 
-# 17. Reverse the list in descending order using reverse() method
+# 17. Reverse the list in descending order using reverse() method.
 it_companies.reverse()
 # print(it_companies)
 
-# 18. Slice out the first 3 companies from the list
+# 18. Slice out the first 3 companies from the list.
 # print(it_companies[3:])
 
 # 19. Slice out the last 3 companies from the list
 # print(it_companies[:-3])
 
-# 20. Slice out the middle IT company or companies from the list
+# 20. Slice out the middle IT company or companies from the list.
 # print(it_companies[:4] + it_companies[4 + 1:])
 
 # 21. Remove the first IT company from the list
 # it_companies.pop(0)
 # print(it_companies)
 
-# 22. Remove the middle IT company or companies from the list
+# 22. Remove the middle IT company or companies from the list.
 # print(len(it_companies)//2) #Middle index is 4
 # it_companies.pop(4)
 # print(it_companies)
 
-# 23. Remove the last IT company from the list
+# 23. Remove the last IT company from the list.
 # it_companies.pop()
 # print(it_companies)
 
-# 24. Remove all IT companies from the list
+# 24. Remove all IT companies from the list.
 # it_companies.clear()
 # print(it_companies)
 
-# 25. Destroy the IT companies list
+# 25. Destroy the IT companies list.
 del it_companies
 
 # 26. Join the following lists:
