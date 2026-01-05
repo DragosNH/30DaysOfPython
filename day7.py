@@ -23,7 +23,7 @@ it_companies.remove('Facebook')
 remove() reises a KeyError if the element is not found while discard() does not rise an error.
 """
 
-# --- Level 1 ---
+# --- Level 2 ---
 # 1.Join A and B
 C = A.union(B)
 
@@ -48,3 +48,21 @@ F = D.union(E)
 # 7. Delete the sets completely
 del A
 del B
+
+# --- Level 3 ---
+# 1. Convert the ages to a set and compare the length of the list and the set, which one is bigger?
+# print(len(age))
+age = set(age) # List is bigger
+# print(len(age))
+
+# 2. Explain the difference between the following data types: string, list, tuple and set
+"""
+A string is an ordered sequence of characters, typically used to represent text.
+A list is a mutable, ordered collection of elements that can be of different data types.
+A tuple is an immutable, ordered collection of elements that can also be of different data types.
+A set is a mutable, unordered collection of unique elements, meaning no duplicates are allowed.
+"""
+
+# 3. I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
+teacher_set = {"I", "am", "a", "teacher", "and", "I", "love", "to", "inspire", "and", "teach", "people"}
+# print(teacher_set) # {'teach', 'teacher', 'love', 'and', 'am', 'to', 'I', 'a', 'inspire', 'people'}
