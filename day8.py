@@ -27,5 +27,25 @@ student = {
 # print(len(student)) #9
 
 # 5. Get the value of skills and check the data type, it should be a list
-print(student['skills'])
-print(type(student['skills']))
+# print(student['skills']) # ['sleeping', 'eating', 'drinking', 'walking']
+# print(type(student['skills'])) #<class 'list'>
+
+# 6. Modify the skills values by adding one or two skills
+student['skills'].append('Runing away from problems')
+# print(student['skills'])
+
+# 7. Get the dictionary keys as a list
+student_key_list = list(student.keys())
+# print(type(student_key_list))
+
+# 8. Get the dictionary values as a list
+student_value_list = list(student.values())
+# print(type(student_value_list))
+
+# 9.Change the dictionary to a list of tuples using items() method
+# student = student.items()
+# print(type(student))
+
+# 10. Delete one of the items in the dictionary
+del student['married']
+# print(student)
