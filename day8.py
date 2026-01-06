@@ -52,4 +52,3 @@ del student['married']
 
 # 11. Delete one of the dictionaries
 del student
-print(student_key_list)
