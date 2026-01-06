@@ -49,3 +49,7 @@ student_value_list = list(student.values())
 # 10. Delete one of the items in the dictionary
 del student['married']
 # print(student)
+
+# 11. Delete one of the dictionaries
+del student
+print(student_key_list)
