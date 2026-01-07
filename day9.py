@@ -47,6 +47,7 @@ Enter number two: 3
 4 is greater than 3
 """
 
+"""
 a = int(input('Enter number one: '))
 b = int(input('Enter number two: '))
 
@@ -56,3 +57,65 @@ elif b > a:
     print(f"{b} is greater than {a}")
 else:
     print(f"{a} is equal to {b}")
+"""
+
+#  --- Level 2 ---
+
+# 1. Write a code which gives grade to students according to theirs scores:
+"""
+80-100, A
+70-89, B
+60-69, C
+50-59, D
+0-49, F
+"""
+
+""""
+score = int(input("Enter your score: "))
+
+if score >= 80 and score <= 100:
+    print("A")
+elif score >= 70 and score <= 79:
+    print("B")
+elif score >= 60 and score <= 69:
+    print("C")
+elif score >= 50 and score <= 59:
+    print("D")
+elif score >= 0 and score <= 49:
+    print("F")
+else:
+    print("Such score does not exists")
+"""
+
+# 2. Check if the season is Autumn, Winter, Spring or Summer. If the user input is: September, October or November, the season is Autumn. December, January or February, the season is Winter. March, April or May, the season is Spring June, July or August, the season is Summer
+"""
+month = str(input("Add a month: ")).capitalize()
+
+if month == "September" or month == "October" or month == "November":
+    print("Autumn")
+elif month == "December" or month == "January" or month == "February":
+    print("Winter")
+elif month == "March" or month == "April" or month == "May":
+    print("Spring")
+else: 
+    print("Summer")
+"""
+
+# 3. The following list contains some fruits:
+"""
+```sh
+fruits = ['banana', 'orange', 'mango', 'lemon']
+```
+
+If a fruit doesn't exist in the list add the fruit to the list and print the modified list. If the fruit exists print('That fruit already exist in the list')
+"""
+
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruit = str(input("Add a fruit in the basket: "))
+
+if fruit in fruits:
+    print('That fruit already exist in the list')
+else:
+    fruits.append(fruit)
+    print(fruits)
