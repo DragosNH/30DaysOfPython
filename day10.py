@@ -336,7 +336,56 @@ for i in countries:
 """
 
 # 2. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+"""
 fruit_list = ['banana', 'orange', 'mango', 'lemon']
 for i in fruit_list[::-1]:
     print(i)
+"""
 
+# --- Level 3 ---
+# i. Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
+from country_data import country_data
+
+"""
+language_count =0 
+for country in country_data:
+    if("languages" in country):
+        language_count += len(country["languages"])
+
+print("Total lnagauges : ", language_count) 
+"""
+
+# ii. Find the ten most spoken languages from the data
+"""
+languages = []
+for country in country_data:
+    if("languages" in country):
+        for lang in country["languages"]:
+            languages.append(lang)
+
+# Create a set from list of all langauges used, that will give us unique langauges       
+unique_languages = set()
+unique_languages = languages
+
+# Create a dictionary with frequency of each langauge
+lang_frequency = {}
+for lang in unique_languages:
+    lang_frequency[lang] = languages.count(lang)
+
+# Now sort the dictionary on frequency (descending), which will give us a list of keys
+sorted_by_frq= sorted(lang_frequency.items(), key = lambda x: x[1], reverse=True)
+
+# Now slice the first 10 from the sorted list
+ten_most_spoken =sorted_by_frq[:10]
+
+print(ten_most_spoken)
+"""
+
+# iii. Find the 10 most populated countries in the world
+country_population = {}
+for country in country_data:
+   
+    if("population" in country):
+       country_population[country["name"]] = country["population"]
+     
+print(sorted(country_population.items(), key = lambda x:x[1], reverse=True)[:10])
