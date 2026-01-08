@@ -79,6 +79,25 @@ for i in range(8, symbol_height + 1):
 10 x 10 = 100
 """
 
-
+"""
 for number in range(11):
     print(f"{number} x {number} = {number * number}")
+"""
+
+# 6. Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+"""
+list = ['Python', 'Numpy','Pandas','Django', 'Flask']
+for i in range(1, len(list)):
+    print(list[i])
+"""
+
+# 7. Use for loop to iterate from 0 to 100 and print only even numbers.
+"""
+for i in range(1, 100, 15):
+    print(i)
+"""
+
+# 8. Use for loop to iterate from 0 to 100 and print only odd numbers.
+
+for i in range(1, 100, 2):
+    print(i)
