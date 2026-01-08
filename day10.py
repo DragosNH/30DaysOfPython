@@ -98,6 +98,35 @@ for i in range(1, 100, 15):
 """
 
 # 8. Use for loop to iterate from 0 to 100 and print only odd numbers.
-
+"""
 for i in range(1, 100, 2):
     print(i)
+"""
+
+# --- Level 2 ---
+
+# 1. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+#The sum of all numbers is 5050.
+
+"""
+max_number = 100
+
+for i in range(max_number):
+    total = sum(range(i, max_number + 1))
+    print(f"The sum of all numbers is {total}")
+    break
+"""
+
+# 2. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+# The sum of all evens is 2550. And the sum of all odds is 2500.
+"""
+max_number = 100
+
+for i in range(max_number):
+    total_odds = sum(range(i, max_number + 1, 2))
+    for j in range(max_number):
+        total_evens = sum([num for num in range(1, 101) if num % 2 == 0])
+        print(f"The sum of all evens is {total_odds}. And the sum of all odds is {total_evens}.")
+        break
+    break
+"""
