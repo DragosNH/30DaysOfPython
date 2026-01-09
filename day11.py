@@ -94,10 +94,15 @@ def print_list(*args):
 # print_list('yes', 'no', 'maybe', 'of course')
 
 # 9. Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
-def reverse_list(*args):
-    for i in args[::-1]:
-        list = []
-        print(list.append(i))
+def reverse_list(lst):
+    list = []
+    if len(lst) > 0:
+        for i in range(len(lst) -1, -1, -1):
+            list.append(lst[i])
+        return list 
 
-reverse_list(1,2,3,4,5)
-reverse_list("A", "B", "C")
+nums = [1,2,3,4,5]
+letters = ["A", "B", "C"]
+
+print(reverse_list(nums))
+print(reverse_list(letters))
