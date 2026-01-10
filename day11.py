@@ -117,3 +117,53 @@ random_list = ["this", "is", "a", "list"]
 
 # print(capitalize_list_items(random_list))
     
+# 11. Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+
+def add_item(list, item):
+    """ Function that adds an item to the list """
+    list.append(item)
+    return list
+
+# food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+# print(add_item(food_staff, 'Meat'))
+# numbers = [2, 3, 7, 9]
+# print(add_item(numbers, 5))
+
+# 12. Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+def remove_item(list, item):
+    """ function that removes an item from a list """
+    list.remove(item)
+    return list
+
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+# print(remove_item(food_staff, 'Mango'))
+
+# 13. Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+
+def sum_of_numbers(numbers):
+    """ sum of all numbers """
+    total = sum({i for i in range(1, numbers + 1)})
+    return total
+
+# print(sum_of_numbers(5))  # 15
+# print(sum_of_numbers(10)) # 55
+# print(sum_of_numbers(100)) # 5050
+
+# 14. Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+
+def sum_of_odds(odd):
+    total = sum({i for i in range(2, odd + 1)})
+    return total
+
+# print(sum_of_odds(12))
+
+# 15. Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+
+def sum_of_even(end):
+    total = 0
+    for num in range(1, end + 1):
+        if num % 2 == 0:
+            total += num
+    return total
+
+# print(sum_of_even(20))
