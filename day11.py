@@ -167,3 +167,59 @@ def sum_of_even(end):
     return total
 
 # print(sum_of_even(20))
+
+# --- Level 2 ---
+# 1. Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+def evens_and_odds(num):
+    even_count = 0
+    odd_count = 0
+    for i in range(0, num+1):
+        if(i%2 ==0):
+            even_count+=1
+        else:
+            odd_count+=1
+    print("The number of odds are ", odd_count)
+    print("The number of evens are ", even_count)
+
+# evens_and_odds(100)
+
+# 2. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+
+def factorial(num):
+    result = 1
+    for i in range(1, num + 1):
+        result = result * i
+        print(result)
+
+# factorial(5)
+
+# 3. Call your function is_empty, it takes a parameter and it checks if it is empty or not
+
+def is_empty(param):
+    if param == " " or param =="":
+        print("The string is empty")
+    else:
+        print("The string is NOT empty")
+
+# is_empty('')
+
+# 4. Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+
+def calculate_mean(mean):
+    mean = sum(nums) / len(nums)
+
+    return mean    
+
+numbers = [4, 8, 6, 5, 3, 2, 8, 9, 2, 5]
+# print(calculate_mean(numbers)) 
+
+def calculate_median(median):
+    n = len(median)
+    idx = n // 2
+
+    if(n % 2 != 0 ): 
+        return sorted(median)[idx]
+    return sum(sorted(median)[idx - 1:idx + 1]) / 2
+
+print(calculate_median(numbers)) 
