@@ -104,5 +104,16 @@ def reverse_list(lst):
 nums = [1,2,3,4,5]
 letters = ["A", "B", "C"]
 
-print(reverse_list(nums))
-print(reverse_list(letters))
+# print(reverse_list(nums))
+# print(reverse_list(letters))
+
+# 10.Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items.
+
+def capitalize_list_items(lst):
+    list = [word.capitalize() for word in lst]
+    return list
+
+random_list = ["this", "is", "a", "list"]
+
+# print(capitalize_list_items(random_list))
+    
