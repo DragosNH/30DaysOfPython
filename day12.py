@@ -1,5 +1,5 @@
 from secrets import token_hex
-from random import randint
+from random import randint, shuffle, sample
 
 # --- Day 12: 30 Days of python programming ---
 # --- Level 1 ---
@@ -37,7 +37,7 @@ def list_of_hexa_colors():
     hex_number = '#' + hex(random_number)[2:]
     return hex_number
 
-print(list_of_hexa_colors())
+# print(list_of_hexa_colors())
 
 # 2. Write a function list_of_rgb_colors which returns any number of RGB colors in an array.
 def list_of_rgb_colors():
@@ -73,11 +73,27 @@ def generate_colors(type, value):
     if type == 'rgb':
         rgb_list = []
         for i in range(1, value + 1):
-            # rgb_list.append(r)
-            # rgb_list.append(g)
-            # rgb_list.append(b)
             return [f'rgb{r,g,b}'] * value
 
 
 # print(generate_colors('hexa', 3))
 # print(generate_colors('rgb', 3))
+
+# --- Level 3 ---
+
+# 1. Call your function shuffle_list, it takes a list as a parameter and it returns a shuffled list
+
+nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+def shuffle_list(item):
+    shuffle(item)
+    return item
+
+# print(shuffle_list(nums))
+
+# 2. Write a function which returns an array of seven random numbers in a range of 0-9. All the numbers must be unique.
+
+def unique_numbers():
+   return(sample(range(0,9),7))
+
+print(unique_numbers())
