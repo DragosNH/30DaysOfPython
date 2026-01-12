@@ -35,3 +35,34 @@ last_flatten = [flat for j in flattend_list for flat in j]
 
 new_numbers = [(i, 1, i, i**2, i**3, i**4, i**5) for i in range(11)]
 # print(new_numbers)
+
+# 4. Flatten the following list to a new list:
+"""
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+output:
+[['FINLAND','FIN', 'HELSINKI'], ['SWEDEN', 'SWE', 'STOCKHOLM'], ['NORWAY', 'NOR', 'OSLO']]
+"""
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+
+new_list = [[item[0].upper(),item[0].upper()[:3],item[1].upper()]  for country in countries for item in country ]
+# print(new_list)
+
+# 5. Change the following list to a list of dictionaries:
+
+new_country_list = [
+            {'country' : item[0].upper(), 'city' : item[1].upper()}
+            for country in countries
+            for item in country
+]
+
+# print(new_country_list)
+
+# 6. Change the following list of lists to a list of concatenated strings:
+
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+
+new_names_list = ["{} {}".format(item[0], item[1]) 
+            for tuples in names for item in tuples 
+           ]
+
+print(new_names_list)
