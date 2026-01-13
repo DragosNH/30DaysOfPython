@@ -99,3 +99,45 @@ def long_countries(str):
 
 short_countries = list(filter(long_countries, countries))
 # print(short_countries)
+
+# 6. Use filter to filter out countries containing six letters and more in the country list.
+def too_long_names(str):
+    if len(str) >= 6:
+        return False
+    return True
+
+more_than_six = (list(filter(too_long_names, countries)))
+
+# print(more_than_six)
+
+# 7. Use filter to filter out countries starting with an 'E'
+def remove_e(str):
+    if "e" in str or "E" in str:
+        return False
+    return True
+
+countries_without_e = list(filter(remove_e, countries))
+# print(countries_without_e)
+
+# 8. Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
+uppercase_countries_without_e = list(filter(remove_e, list(map(uppercase_countries, countries))))
+# print(uppercase_countries_without_e)
+
+# 9. Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
+
+def get_string_lists(string):
+    return list(filter(lambda item: type(item) is str, string))
+
+random_list = ["Yes", 29, "No"]
+
+# print(get_string_lists(random_list))
+
+# 10. Use reduce to sum all the numbers in the numbers list.
+from functools import reduce 
+
+def sum_of_numbers(x, y):
+    return int(x) + int(y)
+
+total = reduce(sum_of_numbers, numbers)
+
+print(total)
