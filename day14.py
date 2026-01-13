@@ -38,10 +38,17 @@ def countries_list_function(countries_names):
 
 # countries_list_function(countries)
 
-# 5. Use for to print each name in the names list.
+# 5. Use for loop to print each name in the names list.
 
 def show_names_list(names):
     for i in names:
         print(i)
 
-show_names_list(names)
+# show_names_list(names)
+
+# 6. Use for loop to print each number in the numbers list.
+def print_each_number(num=numbers):
+    for i in num:
+        print(i)
+
+# print_each_number()
