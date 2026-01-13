@@ -52,3 +52,50 @@ def print_each_number(num=numbers):
         print(i)
 
 # print_each_number()
+
+# --- Level 2 ---
+# 1. Use map to create a new list by changing each country to uppercase in the countries list. 
+def uppercase_countries(country):
+    return country.upper()
+
+upper_countries = map(uppercase_countries, countries)
+
+# print(list(upper_countries))
+
+# 2. Use map to create a new list by changing each number to its square in the numbers list
+def square_numbers(num):
+    return num ** 2
+
+suqared_numbers = map(square_numbers, numbers)
+
+# print(list(suqared_numbers))
+
+# 3. Use map to change each name to uppercase in the names list
+
+def screamed_names(name):
+    return name.upper()
+
+I_scream_your_names = map(screamed_names, names)
+
+# print(list(I_scream_your_names))
+
+# 4. Use filter to filter out countries containing 'land'.
+
+def filter_countries(coutry):
+    if "land" in coutry:
+        return False
+    return True
+
+non_land_countries = list(filter(filter_countries, countries))
+
+# for x in non_land_countries:
+#     print(x)
+
+# 5. Use filter to filter out countries having exactly six characters.
+def long_countries(str):
+    if len(str) == 6:
+        return False
+    return True
+
+short_countries = list(filter(long_countries, countries))
+# print(short_countries)
