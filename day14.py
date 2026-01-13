@@ -140,4 +140,51 @@ def sum_of_numbers(x, y):
 
 total = reduce(sum_of_numbers, numbers)
 
-print(total)
+# print(total)
+
+# 11. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries.
+def concatenate_countries(x, y):
+    if type(x) is str and type(y) is str:
+        return x + ", " + y
+
+iceland = countries.pop()
+countries_sentence = reduce(concatenate_countries, countries)
+final_sentence = reduce(concatenate_countries, countries) + " and " + iceland + " are north European countries."
+
+# print(final_sentence)
+
+# 12. Declare a function called categorize_countries that returns a list of countries with some common pattern (you can find the countries list in this repository as countries.js(eg 'land', 'ia', 'island', 'stan')).
+
+from countries_list import countries as countries_list
+
+def categorize_countries(lst, pattern):
+    return(list(filter(lambda item : item.endswith(pattern), lst)))
+
+# print(categorize_countries(countries_list,"land"))
+
+# print(categorize_countries(countries_list,"ia"))
+
+# print(categorize_countries(countries_list,"island"))
+
+# print(categorize_countries(countries_list,"stan"))
+
+# 13. Create a function returning a dictionary, where keys stand for starting letters of countries and values are the number of country names starting with that letter.
+def country_dict(lst):
+    unique_characters = sorted(set(country[0] for country in countries))
+    country_map = dict({x, len(y)} for x in unique_characters for y in countries if y.startswith(x))
+    return country_map
+
+# print(country_dict(countries_list))
+
+# 14. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
+
+def get_first_ten_countries(items):
+    return items[:10]
+
+# print(get_first_ten_countries(countries_list))
+
+# 15. Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
+def get_last_ten_countries(items):
+    return items[-10:]
+
+print(get_last_ten_countries(countries_list))
