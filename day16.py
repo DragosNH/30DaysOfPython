@@ -18,3 +18,15 @@ date_object = datetime.strptime(date_string, "%d %B, %Y")
 new_year = datetime.strptime("1 January, 2027", "%d %B, %Y")
 time_difference = new_year - now
 # print(time_difference)
+
+# 5. Calculate the time difference between 1 January 1970 and now.
+past_date = datetime.strptime("1 January, 1970", "%d %B, %Y")
+new_time_difference = now.year - past_date.year
+
+# print(new_time_difference)
+
+# Think, what can you use the datetime module for?
+"""
+- Social media: see the time when something was posted
+- E-mail service: see when the e-mail was sent,opend... 
+"""
