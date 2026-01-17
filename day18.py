@@ -37,7 +37,22 @@ def is_valid_variable(var):
     else:
         print(True)
 
-is_valid_variable('first_name') # True
-is_valid_variable('first-name') # False
-is_valid_variable('1first_name') # False
-is_valid_variable('firstname') # True
+# is_valid_variable('first_name') # True
+# is_valid_variable('first-name') # False
+# is_valid_variable('1first_name') # False
+# is_valid_variable('firstname') # True
+
+# --- Level 3 ---
+
+# Clean the following text. After cleaning, count three most frequent words in the string.
+
+sentence = '''%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?'''
+
+clean_text = re.sub(r'[^a-zA-Z0-9\s]', '', sentence)
+# print(clean_text)
+
+def most_frequent_words(text):
+    words = re.findall(r'\b\w+\b', text)
+    return Counter(words).most_common(3)
+
+print(most_frequent_words(clean_text))
