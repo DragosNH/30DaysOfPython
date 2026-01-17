@@ -25,3 +25,19 @@ min_point = min(numbers)
 max_point = max(numbers)
 distance = max_point - min_point
 # print(distance)
+
+# --- Level 2 ---
+# 1. Write a pattern which identifies if a string is a valid python variable
+
+def is_valid_variable(var):
+    if "-" in var:
+        print(False)
+    elif re.match(r'^\d', var):
+        print(False)
+    else:
+        print(True)
+
+is_valid_variable('first_name') # True
+is_valid_variable('first-name') # False
+is_valid_variable('1first_name') # False
+is_valid_variable('firstname') # True
