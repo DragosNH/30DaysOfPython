@@ -80,3 +80,55 @@ def most_populated_countries(fname, limit):
 
 
 # print(most_populated_countries('files/countries_data.json', 10))
+
+# --- Level 2 ---
+# 1. Extract all incoming email addresses as a list from the email_exchange_big.txt file.
+f = open("files/email_exchanges_big.txt", "r")
+lines = f.readlines()
+email_address = []
+for line in lines:
+    if(line.startswith("From")):        
+        email_address.append(line.split()[1])
+
+# print(email_address)
+
+# 2. Find the most common words in the English language. Call the name of your function find_most_common_words, it will take two parameters - a string or a file and a positive integer, indicating the number of words. Your function will return an array of tuples in descending order. Check the output
+
+def find_most_common_words(fname,limit):
+    f = open(fname,"r")    
+    lines = f.readlines()
+    words = []
+    for line in lines:
+        for word in line.split():
+         words.append(word)    
+    
+    unqiue_words= set()
+    unqiue_words= words
+
+
+    # Create a dictionary with frequency of each word
+    word_frequency = {}
+    for word in unqiue_words:
+        word_frequency[word] = words.count(word)
+        
+
+    # Now sort the dictionary on frequency (descending), which will give us a list of keys
+    sorted_by_frq= sorted(word_frequency.items(), key = lambda x: x[1], reverse=True)
+    # Now slice the first 10 from the sorted list
+    most_common_words =sorted_by_frq[:limit]
+    return most_common_words
+
+# print(find_most_common_words("files/obama_speech.txt", 5))
+
+# 3.Use the function, find_most_frequent_words to find:
+"""
+The ten most frequent words used in Obama's speech
+The ten most frequent words used in Michelle's speech
+The ten most frequent words used in Trump's speech
+The ten most frequent words used in Melina's speech
+"""
+
+# print(find_most_common_words("files/obama_speech.txt", 5)) # "the, 120"
+# print(find_most_common_words("files/michelle_obama_speech.txt", 5)) # to, 83
+# print(find_most_common_words("files/donald_speech.txt", 5)) # the, 61
+# print(find_most_common_words("files/melina_trump_speech.txt", 5)) # and, 73
