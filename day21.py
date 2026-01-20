@@ -69,14 +69,58 @@ class Statistics:
 ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
 data = Statistics(ages)
 
-print('Count:', data.count()) # 25
-print('Sum: ', data.sum()) # 744
-print('Min: ', data.min()) # 24
-print('Max: ', data.max()) # 38
-print('Range: ', data.range()) # 14
-print('Mean: ', data.mean()) # 30
-print('Median: ', data.median()) # 29
-print('Mode: ', data.mode()) # {'mode': 26, 'count': 5}
-print('Standard Deviation: ', data.std()) # 4.2
-print('Variance: ', data.var()) # 17.5
-print('Frequency Distribution: ', data.freq_dist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
+# print('Count:', data.count()) # 25
+# print('Sum: ', data.sum()) # 744
+# print('Min: ', data.min()) # 24
+# print('Max: ', data.max()) # 38
+# print('Range: ', data.range()) # 14
+# print('Mean: ', data.mean()) # 30
+# print('Median: ', data.median()) # 29
+# print('Mode: ', data.mode()) # {'mode': 26, 'count': 5}
+# print('Standard Deviation: ', data.std()) # 4.2
+# print('Variance: ', data.var()) # 17.5
+# print('Frequency Distribution: ', data.freq_dist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
+
+# 2. Create a class called PersonAccount. It has firstname, lastname, incomes, expenses properties and it has total_income, total_expense, account_info, add_income, add_expense and account_balance methods. Incomes is a set of incomes and its description. The same goes for expenses.
+
+class PersonAccount:
+    def __init__(self, firstname = "John", lastname = "Doe", incomes = 2000):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.incomes = incomes
+
+    def person_info(self):
+        return f"First name: {self.firstname}\nLast name: {self.lastname}\nIncomes: {self.incomes}"
+        
+class ExpensesProprietis(PersonAccount):
+    def __init__(self, firstname="John", lastname="Doe", incomes=2000, extra_income=500, total_expense=1000):
+        super().__init__(firstname, lastname, incomes)
+        self.total_income = self.incomes + extra_income
+        self.total_expense = total_expense
+        self.account_info = self.total_income - self.total_expense
+        self.passive_income = 0
+        self.extra_expense = 0
+
+    def add_income(self, income):
+        self.passive_income += income
+
+    def add_expense(self, expense):
+        self.extra_expense += expense
+
+    def account_balance(self):
+        return (self.total_income + self.passive_income) - (self.total_expense + self.extra_expense)
+
+    def person_info(self):
+        return f"""First name: {self.firstname}\nLast name: {self.lastname}\nIncomes: {self.incomes}\nTotal Income: {self.total_income}\nPassive income: {self.passive_income}\nNew expenses: {self.extra_expense}\nAccount Balance: {self.account_balance()}
+        """
+    
+    
+
+    
+# add_income, add_expense, account_balance
+
+p1 = PersonAccount()
+p2 = ExpensesProprietis("Bob", "Paris", 5000)
+p2.add_income(200)
+p2.add_expense(3000)
+print(p2.person_info())
