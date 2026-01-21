@@ -1,4 +1,4 @@
-# --- Day 20: 30 Days of python programming ---
+# --- Day 21: 30 Days of python programming ---
 import statistics
 from collections import Counter
 import math
