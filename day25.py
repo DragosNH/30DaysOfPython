@@ -10,4 +10,11 @@ data = {
 }
 
 df = pd.DataFrame(data, columns=['Name','Country','City'])
-print(df[:5])
+# print(df[:5])
+# print(df[1:6])
+
+series = df['Name']
+# print(series)
+
+rows, cols = df.shape
+print(f"Rows: {rows}, Columns: {cols}")
